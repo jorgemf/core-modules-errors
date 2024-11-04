@@ -81,7 +81,7 @@ contract AutoSavings is ERC7579ExecutorBase, InitializableUniswapV3Integration {
         uint256 length = _configs.length;
 
         // check that the length of tokens is less than max
-        if (length > MAX_TOKENS) revert TooManyTokens();
+        if (length > MAX_TOKENS) return -1;
 
         // loop through the tokens, add them to the list and set their configurations
         for (uint256 i; i < length; i++) {
