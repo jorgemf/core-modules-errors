@@ -115,14 +115,8 @@ contract OwnableValidator2 is ERC7579ValidatorBase {
         // cache the account address
         address account = msg.sender;
 
-        // clear the owners
-        owners.popAll(account);
-
         // remove the threshold
         threshold[account] = 0;
-
-        // remove the owner count
-        ownerCount[account] = 0;
 
         emit ModuleUninitialized(account);
     }
