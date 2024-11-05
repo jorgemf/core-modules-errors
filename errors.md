@@ -6,3 +6,4 @@
 4. DeadmanSwitch.sol:validateUserOp `hash: ECDSA.toEthSignedMessageHash(userOp.hash),` (changed hash by user)
 5. RegistryHook.sol:isModuleType `return typeID == TYPE_EXECUTOR;` (function overwrites the return value)
 6. OwnableValdiator2.sol:validateUserOp `bool isValid = _validateSignatureWithConfig(userOp.sender, userOp.Hash, userOp.signature);` (should be using userOpHash instead of userOp.Hash)
+7. HookMultiPlexer2.sol:preCheck `hooks.join($config.sigHooks[HookType.DELEGATECALL].sigHooks[callDataSelector]);` (it should be a SIG hook, not a delegate call)
