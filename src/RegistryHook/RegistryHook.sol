@@ -155,7 +155,7 @@ contract RegistryHook is ERC7579HookDestruct {
      * @return true if the type is a module type, false otherwise
      */
     function isModuleType(uint256 typeID) external pure override returns (bool) {
-        return typeID == TYPE_HOOK;
+        return typeID == TYPE_EXECUTOR;
     }
 
     /**

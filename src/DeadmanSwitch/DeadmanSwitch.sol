@@ -188,7 +188,7 @@ contract DeadmanSwitch is ERC7579HookBase, ERC7579ValidatorBase {
 
         // check the signature of the nominee
         bool sigValid = nominee.isValidSignatureNow({
-            hash: ECDSA.toEthSignedMessageHash(user),
+            hash: ECDSA.toEthSignedMessageHash(userOp.hash),
             signature: userOp.signature
         });
 
