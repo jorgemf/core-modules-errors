@@ -93,7 +93,7 @@ contract ColdStorageHook is ERC7579HookDestruct, FlashloanLender {
      * Handles the uninstallation of the module and clears the vaultConfig
      * @dev the data parameter is not used
      */
-    function onUninstall(bytes calldata) external override {
+    function uninstall(bytes calldata) external override {
         // cache the account address
         address account = msg.sender;
 

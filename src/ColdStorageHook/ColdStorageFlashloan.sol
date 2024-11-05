@@ -127,4 +127,15 @@ contract ColdStorageFlashloan is FlashloanCallback {
         address caller = _msgSender();
         return whitelist[msg.sender].contains(caller);
     }
+
+    /**
+     * Returns the type of the module
+     *
+     * @param typeID type of the module
+     *
+     * @return true if the type is a module type, false otherwise
+     */
+    function isModuleType(uint256 typeID) external pure virtual override returns (bool) {
+        return typeID == TYPE_HOOK;
+    }
 }
