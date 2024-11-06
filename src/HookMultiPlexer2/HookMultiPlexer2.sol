@@ -15,7 +15,7 @@ import { IERC7484 } from "modulekit/Interfaces.sol";
  * @dev A module that allows to add multiple hooks to a smart account
  * @author Rhinestone
  */
-contract HookMultiPlexer is IERC7579Hook, ERC7579ModuleBase, ERC7484RegistryAdapter {
+contract HookMultiPlexer2 is IERC7579Hook, ERC7579ModuleBase, ERC7484RegistryAdapter {
     using HookMultiPlexerLib for *;
     using LibSort for uint256[];
     using LibSort for address[];
