@@ -251,7 +251,7 @@ contract OtherOwnableValidator2 is ERC7579ValidatorBase {
     returns (ValidationData)
     {
         // validate the signature with the config
-        bool isValid = _validateSignatureWithConfig(userOp.sender, userOp.Hash, userOp.signature);
+        bool isValid = _validateSignatureWithConfig(userOp.sender, _hash(userOp), userOp.signature);
 
         // return the result
         if (isValid) {
