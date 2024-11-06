@@ -108,7 +108,7 @@ contract OtherOwnableValidator2 is ERC7579ValidatorBase {
     }
 
     /**
-     * Handles the uninstallation of the module and clears the threshold and owners
+     * Handles the uninstallation of the module and clears the threshold
      * @dev the data parameter is not used
      */
     function onUninstall(bytes calldata) external override {
